@@ -1,0 +1,19 @@
+name: get-league-patch
+description: An Action to grab the latest League of Legends patch from Data Dragon.
+author: Marvin Scham
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
+
+outputs:
+  patch:
+    description: 'Patch string like `12.1`'
+    value: ${{ steps.patch-output.outputs.patch }}
+
+runs:
+  using: 'composite'
+  steps:
+    - id: patch-output
+      run: echo "::set-output name=patch::$(wget -q -O - https://ddragon.leagueoflegends.com/api/versions.json | sed -n "s/\[\"\([0-9]*\.[0-9]*\).*/\1/p")"
+      shell: bash
+    - run: [ $(echo ${{ steps.patch-output.outputs.patch }} | awk '{print length}') -lt 3 ] && exit 1 || echo "done"
