@@ -16,4 +16,3 @@ runs:
     - id: patch-output
       run: echo "::set-output name=patch::$(wget -q -O - https://ddragon.leagueoflegends.com/api/versions.json | sed -n "s/\[\"\([0-9]*\.[0-9]*\).*/\1/p")"
       shell: bash
-    - run: [ $(echo ${{ steps.patch-output.outputs.patch }} | awk '{print length}') -lt 3 ] && exit 1 || echo "done"
