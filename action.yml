@@ -19,8 +19,7 @@ runs:
       shell: bash
 
     - name: Check whether version is plausible
-    - run: if [[ ! -z $PATCH ]]; then echo "done"; else exit 1; fi
+      run: if [[ ! -z $PATCH ]]; then echo "done"; else exit 1; fi
       shell: bash
-
       env:
         PATCH: '${{ steps.patch-output.outputs.patch }}'
