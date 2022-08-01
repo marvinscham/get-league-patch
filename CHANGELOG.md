@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+- _Nothing as of yet_
+
+## [v1.1.0] - 2022-08-01
+
 ### Added
 
 - Example in README
@@ -27,6 +31,6 @@ _Nothing as of yet_
 - MIT License
 
 [//]: # 'Links to releases:'
-[unreleased]: https://github.com/marvinscham/get-league-patch/compare/v1.0.0...main
+[unreleased]: https://github.com/marvinscham/get-league-patch/compare/v1.1.0...main
 [v1.1.0]: https://github.com/marvinscham/get-league-patch/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/marvinscham/get-league-patch/commits/v1.0.0
