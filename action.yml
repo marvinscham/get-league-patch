@@ -14,10 +14,13 @@ runs:
   using: 'composite'
   steps:
     - id: patch-output
+      name: Grab LoL patch from Data Dragon
       run: echo "::set-output name=patch::$(wget -q -O - https://ddragon.leagueoflegends.com/api/versions.json | sed -n "s/\[\"\([0-9]*\.[0-9]*\).*/\1/p")"
       shell: bash
 
+    - name: Check whether version is plausible
     - run: if [[ ! -z $PATCH ]]; then echo "done"; else exit 1; fi
       shell: bash
+
       env:
         PATCH: '${{ steps.patch-output.outputs.patch }}'
