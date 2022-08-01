@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - _Nothing as of yet_
 
+## [v1.1.1] - 2022-08-01
+
+### Fixed
+
+- Typo resulting in falsely failing runs
+
 ## [v1.1.0] - 2022-08-01
 
 ### Added
@@ -29,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MIT License
 
 [//]: # 'Links to releases:'
-[unreleased]: https://github.com/marvinscham/get-league-patch/compare/v1.1.0...main
+[unreleased]: https://github.com/marvinscham/get-league-patch/compare/v1.1.1...main
+[v1.1.1]: https://github.com/marvinscham/get-league-patch/compare/v1.1.0...v1.1.1
 [v1.1.0]: https://github.com/marvinscham/get-league-patch/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/marvinscham/get-league-patch/commits/v1.0.0
